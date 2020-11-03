@@ -1,6 +1,7 @@
 package com.example.mybuttonsexample;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,8 +36,9 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.toast_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast myToast = Toast.makeText(getActivity(), R.string.cheers, Toast.LENGTH_SHORT);
-                myToast.show();
+                Toast toast = Toast.makeText(getActivity(), R.string.cheers, Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.TOP, 0, 250);
+                toast.show();
             }
         });
 
